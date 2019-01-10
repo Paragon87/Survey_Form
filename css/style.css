@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+}
+
+header {
+  color: gray;
+  display: grid;
+  justify-items: center;  
+}
+
+.container {
+  border: 1px solid black;
+  background-color: gray;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "content1 content2"
+    "content3 content3"
+    "btns .";
+  justify-items: center;
+  align-items: start;
+}
+
+.req {
+  color: red;
+}
+
+.contentLeft {
+  grid-area: content1;
+  padding: 20px;
+}
+
+.contentRight {
+  grid-area: content2;
+  padding: 20px;
+}
+
+.contentBottom {
+  grid-area: content3;
+}
+
+.buttons {
+  grid-area: btns;
+  padding: 20px;
+  justify-self: start;
+}

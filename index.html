@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <main>
+  
+  <header>
+    <h1 id="title">Welcome to the Survey!</h1>
+    <p id="description">Please fill out the form below and submit.</p>
+  </header>
+  
+  <br><br>
+  
+  <div class="container">
+    <form id="survey-form" autocomplete="on" target="_blank" method="post" class="form-container">
+      
+      <div class="contentLeft">
+        <p id="legend"><span class="req">*</span>-Required item</p>
+        <label for="name" id="name-label"><span class="req">*</span>Your name:
+          <input type="text" name="user-name" id="name" placeholder="Johnny Coder" required>
+        </label>
+        <br><br>
+        <label for="email" id="email-label"><span class="req">*</span>Your email address:
+          <input type="email" name="user-email" id="email" placeholder="JCoder@email.com" required>
+        </label>      
+        <br><br>
+        <label for="number" id="number-label"><span class="req">*</span>On a scale of 1-10, how likely is it that you code everyday?
+          <input type="number" name="dailyDedication" id="number" min="1" max="10" placeholder="1-10" required>
+        </label>
+        <br><br>
+        <label for="dropdown" id="drop-label"><span class="req">*</span>Do you have a portfolio:
+          <select name="Portfolio" id="dropdown" size="1" required>
+            <option disable selected value>Please choose an option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+      </div>
+      
+      <div class="contentRight">
+        <fieldset>
+          <legend>Length of programming experience:</legend>
+          <label for="low_exp" id="radio1-label">
+            <input type="radio" id="low_exp" value="low" name="programmingExp">
+            1-2 yrs
+          </label>
+          <label for="med-exp" id="radio2-label">
+            <input type="radio" id="med-exp" value="med" name="programmingExp">
+            3-5 yrs
+          </label>
+          <label for="high-exp" id="radio3-label">
+            <input type="radio" id="high-exp" value="high" name="programmingExp">
+            6-10 yrs
+          </label>
+        </fieldset>
+      
+        <br><br>
+        <fieldset>
+          <legend>Programming type: (Pick all that apply)</legend>
+          <br>
+          <label for="front_end" id="checkbox1-label">Front-end
+            <input type="checkbox" name="frontEnd" id="front_end" value="yes">
+          </label>
+          <label for="back_end" id="checkbox2-label">Back-end
+            <input type="checkbox" name="backEnd" id="back_end" value="yes">
+          </label>
+          <label for="web_app" id="checkbox3-label">Web App Dev
+            <input type="checkbox" name="webAppDev" id="web_app" value="yes">
+          </label>
+          <label for="mobile_dev" id="checkbox4-label">Mobile Dev
+            <input type="checkbox" name="mobileDev" id="mobile_dev" value="yes">
+          </label>
+        </fieldset>
+      </div>
+      
+      <div class="contentBottom">
+        <label for="addtlComments" id="comment-label">Additional Comments:
+          <br>
+          <textarea name="addtlComments" rows="10" cols="60">
+          </textarea>
+        </label>
+      </div>
+      
+      <div class="buttons">
+        <button type="submit" id="submit">Submit Survey</button>
+        <button type="reset" id="reset">Reset Form</button>
+      </div>
+    </form>
+  </div>
+  
+</main>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+  
+
+</body>
+
+</html>
